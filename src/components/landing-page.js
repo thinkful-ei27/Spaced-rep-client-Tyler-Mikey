@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
-
+import Card from './wordCard';
 import LoginForm from './login-form';
 import Beer from '../images/beer.jpg'
 import {TestDashboard} from './testDashboard.js';
@@ -21,6 +21,7 @@ export function LandingPage(props) {
             <LoginForm />
             <Link to="/register">Register</Link>
         </div>
+        
             {/* <div><TestDashboard /></div> */}
             </div>
     );

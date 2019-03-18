@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import Card from './wordCard';
 
 export class TestDashboard extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export class TestDashboard extends React.Component {
                 <div className="dashboard-name">Name: Tyler</div>
                 <div className="dashboard-protected-data">
                     Protected data: you dont have any
+                    <Card title="German Word #" bgc='#fcd000' content='Prost!'/>
                 </div>
             </div>
         );
