@@ -1,13 +1,15 @@
-
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .header-bar{
   text-align: center;
 }
 
 .title{
   background: -webkit-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
-    background: -o-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
-    background: -moz-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
-    background: linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+  background: -o-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+  background: -moz-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+  background: linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
   color: white;
   height: 100%;
   margin-top: 0;
@@ -15,28 +17,38 @@
 }
 
 .home{
-  background: url('../images/beer3.jpg') no-repeat; 
-  background-color: rgba(255, 255, 255, 0.3);
-  background-blend-mode: lighten;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  width: 50%;
+  background-color: white;
   padding-bottom: 10px;
   padding-left: 10px;
-  margin-top: 0;
+  margin-top: 10px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 .description{
   margin-top: 0;
 }
 
+h2{
+  margin-top: 0;
+}
 
-
-/* html { 
-  background: url('../images/beer.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
+body{
+  background: url('../images/beer4.jpg') ; 
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
+  
+}
+.dashboard{
+  border: 1px solid white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
