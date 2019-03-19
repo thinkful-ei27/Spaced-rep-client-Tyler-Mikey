@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {getQuestion} from '../actions/index';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage'
 import Card from './wordCard'
@@ -14,7 +14,7 @@ export class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
+        this.props.dispatch(getQuestion());
         
     }
 

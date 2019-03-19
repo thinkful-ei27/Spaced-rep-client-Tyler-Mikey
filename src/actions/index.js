@@ -1,4 +1,4 @@
-
+import {API_BASE_URL} from '../config'
 export const SET_ANSWER = 'SET_ANSWER';
 
 export const setAnswer = payload => ({
@@ -24,7 +24,7 @@ export const getQuestionSuccess = question => ({
 
 export const getQuestion = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(``, {
+  return fetch(`${API_BASE_URL}/learn`, {
         headers: {
             // Provide our auth token as credentials
             Authorization: `Bearer ${authToken}`
@@ -40,3 +40,18 @@ export const getQuestion = () => (dispatch, getState) => {
     dispatch(getQuestionSuccess(question));
   })
 }
+
+export const EVALUATE_ANSWER = 'EVALUATE_ANSWER';
+
+export const evaluateAnswer = bool => ({
+  type: EVALUATE_ANSWER,
+  bool
+})
+
+export const RESET_ANSWER_STATUS = 'RESET_ANSWER_STATUS';
+
+export const resetAnswerStatus = payload => ({
+  type: RESET_ANSWER_STATUS,
+  payload
+});
+
