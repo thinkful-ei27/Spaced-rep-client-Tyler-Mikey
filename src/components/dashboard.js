@@ -32,7 +32,7 @@ export class Dashboard extends React.Component {
                     <p>hi from dashboard {this.props.username}!</p>
                     <p>Name : {this.props.name}</p>
                 </div>
-                <Card title="German Word #" bgc='#fcd000' content='Prost!'/>
+                <Card bgc='#fcd000'/>
                 {logOutButton}
             </div>
         );
@@ -45,7 +45,7 @@ const mapStateToProps = state => {
         username: state.auth.currentUser.username,
         name: `${currentUser.fullname}`,
         protectedData: state.protectedData.data,
-        loggedIn: state.auth.currentUser !== null
+        loggedIn: state.auth.currentUser !== null,
     };
 };
 
