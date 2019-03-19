@@ -55,3 +55,19 @@ export const resetAnswerStatus = payload => ({
   payload
 });
 
+export const NEXT_QUESTION = 'NEXT_QUESTION';
+
+export const nextQuestion = (germanWord, correct) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  
+  return fetch(`${API_BASE_URL}/learn`, {
+    method: 'POST',
+    // mode: 'no-cors',
+    body: JSON.stringify({germanWord: germanWord, correct: correct}),
+    headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+    }
+}).then(() => dispatch(getQuestion()));
+}
+  
