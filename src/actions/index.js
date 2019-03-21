@@ -70,3 +70,16 @@ export const nextQuestion = (germanWord, correct) => (dispatch, getState) => {
 }).then(() => dispatch(getQuestion()));
 }
   
+export const HANDLE_STREAK_CORRECT = 'HANDLE_STREAK_CORRECT';
+
+export const handleStreakCorrect = payload => ({
+  type: HANDLE_STREAK_CORRECT,
+  payload
+})
+
+export const HANDLE_STREAK_INCORRECT = 'HANDLE_STREAK_INCORRECT';
+
+export const handleStreakIncorrext = payload => ({
+  type: HANDLE_STREAK_INCORRECT,
+  payload
+})

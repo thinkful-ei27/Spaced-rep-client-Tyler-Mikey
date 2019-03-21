@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 import Dashboard from './dashboard'
 import HeaderBar from './header-bar';
+import  ScorePage  from './scores';
 import LandingPage from './landing-page';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
@@ -45,6 +46,7 @@ export class App extends React.Component {
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/scores" component={ScorePage} />
             </div>
         );
     }

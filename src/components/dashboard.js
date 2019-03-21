@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {getQuestion} from '../actions/index';
 import {clearAuth} from '../actions/auth';
-import {clearAuthToken} from '../local-storage'
-import Card from './wordCard'
-
+import {clearAuthToken} from '../local-storage';
+import Card from './wordCard';
+import { Link } from 'react-router-dom';
 
 export class Dashboard extends React.Component {
     logOut() {
@@ -28,12 +28,15 @@ export class Dashboard extends React.Component {
         }
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    <p>hi from dashboard {this.props.username}!</p>
-                    <p>Name : {this.props.name}</p>
+                <div className="dashboard-username-main">
+                    <p className= 'dashboard-welcome'>Welcome {this.props.username}!</p>
+                    <p>Streak : {this.props.streak}</p>
                 </div>
                 <Card bgc='#fcd000'/>
                 {logOutButton}
+                <Link to= '/scores'>
+                <button>View Scores</button>
+                </Link>
             </div>
         );
     }
@@ -42,9 +45,9 @@ export class Dashboard extends React.Component {
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
     return {
+        streak: state.main.streak,
         username: state.auth.currentUser.username,
         name: `${currentUser.fullname}`,
-        protectedData: state.protectedData.data,
         loggedIn: state.auth.currentUser !== null,
     };
 };
