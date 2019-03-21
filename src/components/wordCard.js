@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setAnswer, evaluateAnswer, resetAnswerStatus, nextQuestion} from '../actions/index'
-import {API_BASE_URL} from '../config'
+
 export class Card extends React.Component {
 	evaluateAnswer = (word) => {
 		if (word.toLowerCase() === this.props.word.englishWord.toLowerCase()){
@@ -19,13 +19,14 @@ export class Card extends React.Component {
 	handleClick = () => {
 		this.evaluateAnswer(this.props.answer) === true ? this.props.dispatch(evaluateAnswer('true')) :
 		this.props.dispatch(evaluateAnswer('false'))
-		this.evaluateAnswer(this.props.answer) === true ? this.props.word.Mvalue +=1 : this.props.word.Mvalue -= 1
+		this.evaluateAnswer(this.props.answer) === true ? this.props.word.Mvalue *=2 : this.props.word.Mvalue = 1
 	}
 
 	handleNext = () => {
 		this.props.dispatch(resetAnswerStatus());
 		this.props.dispatch(nextQuestion(this.props.word.germanWord, JSON.parse(this.props.correct)));
 	}
+
 	componentDidMount(){
 		this.props.dispatch(resetAnswerStatus())
 	}
@@ -47,7 +48,7 @@ export class Card extends React.Component {
 				<h2>{this.props.word.germanWord}</h2>
 				<div className="line" style={{backgroundColor: this.props.bgc}}></div>
 				<p className='card-text'></p>
-				<input name='text' type='text'
+				<input classname = 'user-input' name='text' type='text'
 				placeholder='answer'
 				onChange={this.handleChange}></input>
         <button onClick={() => this.handleClick()}>Submit answer</button>

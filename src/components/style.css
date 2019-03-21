@@ -70,16 +70,22 @@ body{
 		box-sizing: border-box;
 		padding: 40px;
 		border-radius: 2px;
-    margin: 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
   };
-		.line{
+	.line{
       width: 320px;
 			height: 5px;
       margin-top: 10px;
     }
-		.card-text{
+	.card-text{
 			margin-top: 15px;
 			font-size: 15px;
 			line-height: 1.6;
 			color: white;
     }
+
+.user-input{
+  display: inline-block;
+}
