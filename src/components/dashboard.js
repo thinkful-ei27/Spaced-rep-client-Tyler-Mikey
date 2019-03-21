@@ -1,9 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import {getQuestion} from '../actions/index';
-import {clearAuth} from '../actions/auth';
-import {clearAuthToken} from '../local-storage';
+import { clearAuth } from '../actions/auth';
+import { clearAuthToken } from '../local-storage';
 import Card from './wordCard';
 import { Link } from 'react-router-dom';
 
@@ -12,14 +11,8 @@ export class Dashboard extends React.Component {
         this.props.dispatch(clearAuth());
         clearAuthToken();
     }
-
-    // componentDidMount() {
-    //     this.props.dispatch(getQuestion());
-        
-    // }
-
     render() {
-    
+
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
@@ -29,13 +22,13 @@ export class Dashboard extends React.Component {
         return (
             <div className="dashboard">
                 <div className="dashboard-username-main">
-                    <h2 className= 'dashboard-welcome'>Welcome {this.props.username}!</h2>
+                    <h2 className='dashboard-welcome'>Welcome {this.props.username}!</h2>
                     <h3>Streak : {this.props.streak}</h3>
                 </div>
-                <Card bgc='#fcd000'/>
+                <Card bgc='#fcd000' />
                 {logOutButton}
-                <Link to= '/scores'>
-                <button>View Scores</button>
+                <Link to='/scores'>
+                    <button>View Scores</button>
                 </Link>
             </div>
         );
@@ -43,7 +36,7 @@ export class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const {currentUser} = state.auth;
+    const { currentUser } = state.auth;
     return {
         streak: state.main.streak,
         username: state.auth.currentUser.username,
