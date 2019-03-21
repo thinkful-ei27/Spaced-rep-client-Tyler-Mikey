@@ -51,6 +51,7 @@ body{
   border-radius: 5px;
   text-align: center;
   margin-top: 5%;
+  color: black;
 }
 
 .container{
@@ -100,6 +101,7 @@ body{
 
 .dashboard-welcome{
   margin-top: 0;
+  padding-top: 7px;
 }
 
 .dashboard-username{
@@ -108,4 +110,17 @@ body{
   border-bottom: 1px solid black;
   margin-bottom: 5px;
   background-color: #dd0000;
+}
+
+button{
+ margin: 10px; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h2, h3{
+  font-weight: normal;
 }

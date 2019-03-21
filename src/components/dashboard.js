@@ -13,10 +13,10 @@ export class Dashboard extends React.Component {
         clearAuthToken();
     }
 
-    componentDidMount() {
-        this.props.dispatch(getQuestion());
+    // componentDidMount() {
+    //     this.props.dispatch(getQuestion());
         
-    }
+    // }
 
     render() {
     
@@ -29,8 +29,8 @@ export class Dashboard extends React.Component {
         return (
             <div className="dashboard">
                 <div className="dashboard-username-main">
-                    <p className= 'dashboard-welcome'>Welcome {this.props.username}!</p>
-                    <p>Streak : {this.props.streak}</p>
+                    <h2 className= 'dashboard-welcome'>Welcome {this.props.username}!</h2>
+                    <h3>Streak : {this.props.streak}</h3>
                 </div>
                 <Card bgc='#fcd000'/>
                 {logOutButton}

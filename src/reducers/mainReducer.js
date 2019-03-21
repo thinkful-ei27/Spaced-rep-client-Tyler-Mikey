@@ -1,4 +1,4 @@
-import {SET_ANSWER, GET_QUESTION_SUCCESS, EVALUATE_ANSWER, RESET_ANSWER_STATUS, HANDLE_STREAK_CORRECT, HANDLE_STREAK_INCORRECT} from '../actions/index.js'
+import {SET_ANSWER, GET_QUESTION_SUCCESS, EVALUATE_ANSWER, RESET_ANSWER_STATUS, HANDLE_STREAK_CORRECT, HANDLE_STREAK_INCORRECT, GET_SCORES_SUCCESS} from '../actions/index.js'
 
 
 
@@ -7,7 +7,8 @@ const initialState = {
   answer: '',
   correct: null,
   currentWord: 'null',
-  streak: 0
+  streak: 0,
+  scores: []
 }
 //  send german word and true false for right wrong
 
@@ -48,5 +49,10 @@ else if(action.type === HANDLE_STREAK_INCORRECT){
   })
 }
 
+else if(action.type === GET_SCORES_SUCCESS){
+  return Object.assign({}, state, {
+    scores: [...action.payload]
+  })
+}
   return state
 }

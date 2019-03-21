@@ -83,3 +83,35 @@ export const handleStreakIncorrext = payload => ({
   type: HANDLE_STREAK_INCORRECT,
   payload
 })
+
+export const GET_SCORES = 'GET_SCORES';
+
+export const GET_SCORES_SUCCESS = 'GET_SCORES_SUCCESS';
+
+export const getScoresSuccess = payload => ({
+type: GET_SCORES_SUCCESS,
+payload
+})
+
+export const getScores = () => (dispatch, getState) => {
+  console.log('this did run');
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/score`, {
+        headers: {
+            // Provide our auth token as credentials
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+    .then(res => {
+      if (!res.ok) {
+          return Promise.reject(res.statusText);
+      }
+      return res.json();
+  })
+  .then(scores => {
+    dispatch(getScoresSuccess(scores));
+  })
+};
+
+
+

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setAnswer, evaluateAnswer, resetAnswerStatus, nextQuestion, handleStreakCorrect, handleStreakIncorrext} from '../actions/index'
+import {setAnswer, evaluateAnswer, resetAnswerStatus, nextQuestion, handleStreakCorrect, handleStreakIncorrext,getQuestion} from '../actions/index'
 
 export class Card extends React.Component {
 	evaluateAnswer = (word) => {
@@ -28,6 +28,10 @@ export class Card extends React.Component {
 		this.props.dispatch(nextQuestion(this.props.word.germanWord, JSON.parse(this.props.correct)));
 	}
 
+	componentWillMount(){
+		this.props.dispatch(getQuestion())
+	}
+	
 	componentDidMount(){
 		this.props.dispatch(resetAnswerStatus())
 	}
