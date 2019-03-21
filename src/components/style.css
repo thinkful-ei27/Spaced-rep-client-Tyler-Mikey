@@ -123,3 +123,13 @@ ul {
 h2, h3{
   font-weight: normal;
 }
+
+@media(max-width: 900px){
+  .dashboard{
+    width: 95%
+  }
+  .card{
+    width: 75%;
+    margin-top: 15px;
+}
+}
