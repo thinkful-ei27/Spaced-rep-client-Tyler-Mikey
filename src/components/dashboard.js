@@ -20,17 +20,19 @@ export class Dashboard extends React.Component {
             );
         }
         return (
-            <div className="dashboard">
-                <div className="dashboard-username-main">
-                    <h2 className='dashboard-welcome'>Welcome {this.props.username}!</h2>
-                    <h3>Streak : {this.props.streak}</h3>
+            <main role='main'>
+                <div className="dashboard">
+                    <div className="dashboard-username-main">
+                        <h2 className='dashboard-welcome'>Welcome {this.props.username}!</h2>
+                        <h3>Streak : {this.props.streak}</h3>
+                    </div>
+                    <Card bgc='#fcd000' />
+                    {logOutButton}
+                    <Link to='/scores'>
+                        <button>View Scores</button>
+                    </Link>
                 </div>
-                <Card bgc='#fcd000' />
-                {logOutButton}
-                <Link to='/scores'>
-                    <button>View Scores</button>
-                </Link>
-            </div>
+            </main>
         );
     }
 }

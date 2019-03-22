@@ -11,9 +11,9 @@ export class HeaderBar extends React.Component {
 
     render() {
         return (
-            <div className="header-bar">
+            <header role='banner' className="header-bar">
                 <h1 className='title'>German for Friday Night</h1>
-            </div>
+            </header>
         );
     }
 }
