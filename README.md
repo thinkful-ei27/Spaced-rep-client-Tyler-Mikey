@@ -9,15 +9,6 @@ Learn just enough German to get your drink on through the power of spaced repeti
 - Front End: https://gentle-temple-25827.herokuapp.com/
 - Back End: https://friday-night-server.herokuapp.com/
 
-## Features
-
-- A new, randomly-generated battle with every refresh of the app.
-- Skip button for matchups where users are either unfamiliar with one of the games or don't have a preference for one game over the other.
-- Learn more about each game with individual info pages.
-- User accounts to save ranking history.
-- See all games in the database through the games list.
-- Game recommendations.
-
 ## The Stack
 
 ### Client
@@ -32,3 +23,5 @@ Learn just enough German to get your drink on through the power of spaced repeti
 - [Node.js](https://nodejs.org/en/) with the [Express](https://expressjs.com/) framework.
 - [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/) for the database.
 - [Passport](http://www.passportjs.org/) authentication using [node.bcrypt.js](https://github.com/kelektiv/node.bcrypt.js/) and [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
+
+
