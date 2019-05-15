@@ -9,6 +9,8 @@ Learn just enough German to get your drink on through the power of spaced repeti
 - Front End: https://gentle-temple-25827.herokuapp.com/
 - Back End: https://friday-night-server.herokuapp.com/
 
+![german](https://user-images.githubusercontent.com/43865177/57746579-a9ebaa00-7686-11e9-8de1-56265a8597c0.png)
+
 ## The Stack
 
 ### Client
